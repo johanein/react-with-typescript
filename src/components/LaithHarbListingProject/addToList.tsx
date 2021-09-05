@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IState as props } from "../App";
+import { IState as props } from "./index";
 
 interface IState {
   input: {
@@ -24,6 +24,8 @@ const AddToList: React.FC<IProps> = ({ people, setPeople }) => {
   };
   const [input, setInput] = useState<IState["input"]>(initialState);
 
+  // get the type of function by hovering after writing a inline function
+  // get the element type by hovering over onchange
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ): void => {
